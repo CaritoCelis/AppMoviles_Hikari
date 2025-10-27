@@ -13,30 +13,41 @@ import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
     primary = HikariPink,
-    secondary = HikariPinkVariant,
-    background = Color.Black,
-    surface = HikariLightPink,
-    onPrimary = Color.White,
-    onSecondary = Color.White,
-    onBackground = Color.White,
-    onSurface = HikariOnSurface,
+    secondary = HikariLavender,
+    tertiary = HikariPeach,
+    background = Color(0xFF1A1A1A),
+    surface = Color(0xFF2D2D2D),
+    surfaceVariant = HikariPinkDark.copy(alpha = 0.2f),
+    onPrimary = HikariWhite,
+    onSecondary = HikariOnSurface,
+    onBackground = HikariWhite,
+    onSurface = HikariWhite,
+    primaryContainer = HikariPinkVariant,
+    onPrimaryContainer = HikariWhite
 )
 
 private val LightColorScheme = lightColorScheme(
     primary = HikariPink,
-    secondary = HikariPinkVariant,
-    background = Color.White,
+    secondary = HikariLavender,
+    tertiary = HikariPeach,
+    background = HikariWhite,
     surface = HikariLightPink,
-    onPrimary = Color.White,
-    onSecondary = Color.White,
+    surfaceVariant = HikariCream,
+    onPrimary = HikariWhite,
+    onSecondary = HikariOnSurface,
     onBackground = HikariOnSurface,
     onSurface = HikariOnSurface,
+    primaryContainer = HikariPinkVariant,
+    onPrimaryContainer = HikariWhite,
+    secondaryContainer = HikariLavender,
+    tertiaryContainer = HikariMint,
+    outline = HikariPink.copy(alpha = 0.5f)
 )
 
 @Composable
 fun PasteleriaHikariTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    dynamicColor: Boolean = false, // Dynamic color is disabled
+    dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {
